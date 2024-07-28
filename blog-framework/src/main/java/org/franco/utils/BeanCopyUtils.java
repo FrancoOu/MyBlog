@@ -30,15 +30,5 @@ public class BeanCopyUtils {
                 .collect(Collectors.toList());
 
     }
-    public static void main(String[] args) {
-        Article article = new Article();
 
-        article.setId(1L);
-        article.setTitle("test");
-
-        HotArticleVo hotArticleVo = copyBean(article, HotArticleVo.class);
-
-        System.out.println(hotArticleVo);
-
-    }
 }

@@ -8,5 +8,7 @@ public class SystemConstants {
 
     public static final String CATEGORY_DRAFT = "1";
 
+    public static final String LINK_STATUS_APPROVED = "0";
+
 
 }

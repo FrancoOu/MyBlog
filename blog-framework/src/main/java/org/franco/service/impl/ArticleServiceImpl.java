@@ -12,6 +12,7 @@ import org.franco.domain.entity.Category;
 import org.franco.domain.vo.DisplayedArticleVo;
 import org.franco.domain.vo.HotArticleVo;
 import org.franco.domain.vo.PageVo;
+import org.franco.domain.vo.SingleArticleVo;
 import org.franco.mapper.ArticleMapper;
 import org.franco.service.ArticleService;
 import org.franco.service.CategoryService;
@@ -86,7 +87,6 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article>
                 .map(article -> article.setCategoryName(categoryMap.get(article.getCategoryId())))
                 .collect(Collectors.toList());
 
-
         List<DisplayedArticleVo> displayedArticleVos = BeanCopyUtils.copyBeanList(articles, DisplayedArticleVo.class);
 
         // put articles into pageVo with total number of articles
@@ -94,6 +94,20 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article>
         PageVo pageVo = new PageVo(displayedArticleVos, page.getTotal());
 
         return ResponseResult.okResult(pageVo);
+    }
+
+    @Override
+    public ResponseResult getArticleById(Long id) {
+        Article article = getById(id);
+        SingleArticleVo singleArticleVo = BeanCopyUtils.copyBean(article, SingleArticleVo.class);
+        Long categoryId = article.getCategoryId();
+
+        Category category = categoryService.getById(categoryId);
+        if (category != null) {
+            singleArticleVo.setCategoryName(category.getName());
+        }
+
+        return ResponseResult.okResult(singleArticleVo);
     }
 }
 
