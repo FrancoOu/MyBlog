@@ -10,8 +10,8 @@ public enum AppHttpCodeEnum {
     USERNAME_EXIST(501,"Username already exists"),
     PHONENUMBER_EXIST(502,"Phone number already exists"),
     EMAIL_EXIST(503, "Email already exists"),
-    REQUIRE_USERNAME(504, "Username required"),
-    LOGIN_ERROR(505,"Wrong username or password"),;
+    REQUIRE_USERNAME(401, "Username required"),
+    LOGIN_ERROR(401,"Wrong username or password"),;
     int code;
     String msg;
     AppHttpCodeEnum(int code, String errorMessage){

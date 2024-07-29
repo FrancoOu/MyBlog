@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cbd698f-c707-431c-88e7-08310445163e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/LinkController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/constants/SystemConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/constants/SystemConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils/BeanCopyUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils/BeanCopyUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/enums/AppHttpCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/enums/AppHttpCodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/AuthenticationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils/WebUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils/WebUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +140,7 @@
       <workItem from="1721216941546" duration="6875000" />
       <workItem from="1721370866505" duration="1316000" />
       <workItem from="1721372195018" duration="11802000" />
-      <workItem from="1721557229985" duration="43512000" />
+      <workItem from="1721557229985" duration="57426000" />
     </task>
     <servers />
   </component>
@@ -174,6 +170,11 @@
           <url>file://$PROJECT_DIR$/blog-admin/src/main/java/org/franco/Main.java</url>
           <line>15</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/blog-client/src/main/java/org/franco/filter/JwtAuthenticationTokenFilter.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

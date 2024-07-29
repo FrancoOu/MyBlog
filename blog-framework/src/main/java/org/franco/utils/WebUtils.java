@@ -1,5 +1,7 @@
 package org.franco.utils;
 
+import com.alibaba.fastjson.JSON;
+import org.franco.domain.ResponseResult;
 import org.springframework.web.context.request.RequestContextHolder;
 
 import javax.servlet.ServletContext;
@@ -24,6 +26,20 @@ public class WebUtils
             response.setContentType("application/json");
             response.setCharacterEncoding("utf-8");
             response.getWriter().print(string);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public static void renderString(HttpServletResponse response, ResponseResult responseResult) {
+        try
+        {
+            response.setStatus(200);
+            response.setContentType("application/json");
+            response.setCharacterEncoding("utf-8");
+            response.getWriter().print(JSON.toJSONString(responseResult));
         }
         catch (IOException e)
         {
