@@ -22,8 +22,8 @@ public class ArticleController {
         return articleService.getHotArticles();
     }
 
-    @GetMapping("")
-    public ResponseResult getArticles(Integer pageNum,Integer pageSize, Long categoryId) {
+    @GetMapping
+    public ResponseResult getArticles(Integer pageNum, Integer pageSize, Long categoryId) {
 
         return articleService.getArticles(pageNum, pageSize, categoryId);
     }

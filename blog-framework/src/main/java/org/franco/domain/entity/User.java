@@ -14,7 +14,7 @@ import lombok.Data;
  */
 @TableName(value ="user")
 @Data
-public class User {
+public class User implements Serializable {
     /**
      * 主键
      */
@@ -91,4 +91,6 @@ public class User {
      */
     private Integer delFlag;
 
+    @TableField(exist = false)
+    private static final long serialVersionUID = 1L;
 }

@@ -10,6 +10,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 * @createDate 2024-07-24 14:39:48
 */
 public interface LinkService extends IService<Link> {
-
     ResponseResult getLinks();
 }

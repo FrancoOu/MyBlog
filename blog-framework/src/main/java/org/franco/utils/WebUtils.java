@@ -36,7 +36,7 @@ public class WebUtils
     public static void renderString(HttpServletResponse response, ResponseResult responseResult) {
         try
         {
-            response.setStatus(200);
+            response.setStatus(responseResult.getCode());
             response.setContentType("application/json");
             response.setCharacterEncoding("utf-8");
             response.getWriter().print(JSON.toJSONString(responseResult));
