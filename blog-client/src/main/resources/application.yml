@@ -17,3 +17,6 @@ mybatis-plus:
       logic-delete-value: 1
       logic-not-delete-value: 0
       id-type: auto
+google-cloud:
+  projectId: inner-strategy-431510-d7
+  bucketName: franco-s-blog-bucket

@@ -12,7 +12,9 @@ public enum AppHttpCodeEnum {
     EMAIL_EXIST(503, "Email already exists"),
     REQUIRE_USERNAME(401, "Username required"),
     LOGIN_ERROR(401,"Wrong username or password"),
-    EMPTY_CONTENT_ERROR(400, "Empty comment")
+    EMPTY_CONTENT_ERROR(400, "Empty comment"),
+
+    FILE_TYPE_ERROR(422, "File type not supported")
     ;
     int code;
     String msg;

@@ -4,11 +4,15 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.franco.domain.ResponseResult;
 import org.franco.domain.entity.User;
 import org.franco.domain.vo.UserInfo;
+import org.franco.enums.AppHttpCodeEnum;
+import org.franco.exception.SystemException;
 import org.franco.service.UserService;
 import org.franco.mapper.UserMapper;
 import org.franco.utils.BeanCopyUtils;
 import org.franco.utils.SecurityUtils;
 import org.springframework.stereotype.Service;
+
+import java.util.Objects;
 
 /**
 * @author franco
@@ -29,6 +33,17 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 
         return ResponseResult.okResult(userInfo);
 
+    }
+
+    @Override
+    public ResponseResult updateUserInfo(User user) {
+        Long userId = SecurityUtils.getUserId();
+        if (!Objects.equals(userId, user.getId())){
+            throw new SystemException(AppHttpCodeEnum.NEED_LOGIN);
+        }
+        updateById(user);
+
+        return ResponseResult.okResult();
     }
 }
 

@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cbd698f-c707-431c-88e7-08310445163e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils/SecurityUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-client/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/LinkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/LinkController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/constants/SystemConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/constants/SystemConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/vo/LinkVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/vo/LinkVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-client/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/enums/AppHttpCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/enums/AppHttpCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/mapper/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/LinkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/LinkService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils/WebUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils/WebUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,36 +48,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "corretto-1.8",
-    "last_opened_file_path": "/Users/franco/Desktop/Projects/MyBlog/blog-framework/src/main/java/org/franco/utils",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/franco/Desktop/Projects/MyBlog/blog-client/src/main/java/org/franco/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "swagger",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/franco/Desktop/Projects/MyBlog/blog-framework/src/main/java/org/franco/utils&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/franco/Desktop/Projects/MyBlog/blog-client/src/main/java/org/franco/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -95,21 +91,54 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.BlogApplication">
-    <configuration name="BeanCopyUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.franco.utils.BeanCopyUtils" />
-      <module name="blog-framework" />
+    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="GoogleCloudStorageTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog-client" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.franco.utils.*" />
+          <option name="PATTERN" value="org.franco.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.franco" />
+      <option name="MAIN_CLASS_NAME" value="org.franco.GoogleCloudStorageTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
+    <configuration name="GoogleCloudStorageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog-client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.franco.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.franco" />
+      <option name="MAIN_CLASS_NAME" value="com.franco.GoogleCloudStorageTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoogleCloudStorageTest.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog-client" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.franco.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.franco" />
+      <option name="MAIN_CLASS_NAME" value="org.franco.GoogleCloudStorageTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="blog-client" />
@@ -125,15 +154,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.BeanCopyUtils" />
-      <item itemvalue="HTTP Request.generated-requests | #1" />
+      <item itemvalue="HTTP Request.generated-requests | #2" />
+      <item itemvalue="JUnit.GoogleCloudStorageTest" />
+      <item itemvalue="JUnit.GoogleCloudStorageTest (1)" />
+      <item itemvalue="JUnit.GoogleCloudStorageTest.test (1)" />
       <item itemvalue="Spring Boot.BlogApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.generated-requests | #1" />
         <item itemvalue="Spring Boot.BlogApplication" />
-        <item itemvalue="Application.BeanCopyUtils" />
+        <item itemvalue="HTTP Request.generated-requests | #2" />
+        <item itemvalue="JUnit.GoogleCloudStorageTest.test (1)" />
+        <item itemvalue="JUnit.GoogleCloudStorageTest (1)" />
+        <item itemvalue="JUnit.GoogleCloudStorageTest" />
       </list>
     </recent_temporary>
   </component>
@@ -151,7 +184,9 @@
       <workItem from="1721216941546" duration="6875000" />
       <workItem from="1721370866505" duration="1316000" />
       <workItem from="1721372195018" duration="11802000" />
-      <workItem from="1721557229985" duration="82136000" />
+      <workItem from="1721557229985" duration="82928000" />
+      <workItem from="1722748960174" duration="14526000" />
+      <workItem from="1722925445896" duration="15920000" />
     </task>
     <servers />
   </component>
@@ -182,6 +217,10 @@
           <line>15</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="5" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
