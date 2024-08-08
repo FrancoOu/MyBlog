@@ -52,5 +52,7 @@ public class CommentVo {
 
     private String userName;
 
+    private String avatar;
+
     private List<CommentVo> children;
 }

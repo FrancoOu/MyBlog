@@ -77,8 +77,9 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment>
 
         LambdaQueryWrapper<Comment> queryWrapper = new LambdaQueryWrapper<>();
 
-        queryWrapper.eq(Comment::getRootId, id);
-        queryWrapper.orderByDesc(Comment::getCreateTime);
+        queryWrapper
+                .eq(Comment::getRootId, id)
+                .orderByDesc(Comment::getCreateTime);
 
         List<Comment> comments = list(queryWrapper);
 
@@ -93,6 +94,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment>
         commentVo.stream()
                 .map(comment -> {
                     comment.setUserName(userService.getById(comment.getCreatedBy()).getNickName());
+                    comment.setAvatar(userService.getById(comment.getCreatedBy()).getAvatar());
                     if (comment.getToCommentUserId() != -1L) {
                         comment.setToCommentUserName(userService.getById(comment.getToCommentUserId()).getNickName());
                     }

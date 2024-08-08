@@ -26,5 +26,11 @@ public class UserController {
         return userService.updateUserInfo(user);
     }
 
+    @PostMapping
+    public ResponseResult createUser(@RequestBody User user){
+
+        return userService.createUser(user);
+    }
+
 
 }
