@@ -1,5 +1,6 @@
 package org.franco.controller;
 
+import org.franco.annotation.SystemLog;
 import org.franco.domain.ResponseResult;
 import org.franco.domain.entity.User;
 import org.franco.enums.AppHttpCodeEnum;
@@ -18,6 +19,7 @@ public class LoginController {
     private AuthenticationService authenticationService;
 
     @PostMapping("/login")
+    @SystemLog(controllerDescription = "User log in")
     public ResponseResult login(@RequestBody User user) {
         if (!StringUtils.hasText(user.getUserName())){
             throw new SystemException(AppHttpCodeEnum.REQUIRE_USERNAME);

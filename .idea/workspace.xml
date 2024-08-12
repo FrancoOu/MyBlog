@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3cbd698f-c707-431c-88e7-08310445163e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/vo/CommentVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/vo/CommentVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/enums/AppHttpCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/enums/AppHttpCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/CommentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +179,7 @@
       <workItem from="1721372195018" duration="11802000" />
       <workItem from="1721557229985" duration="82928000" />
       <workItem from="1722748960174" duration="14526000" />
-      <workItem from="1722925445896" duration="23301000" />
+      <workItem from="1722925445896" duration="30705000" />
     </task>
     <servers />
   </component>

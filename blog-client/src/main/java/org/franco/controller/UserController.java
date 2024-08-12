@@ -1,6 +1,7 @@
 package org.franco.controller;
 
 
+import org.franco.annotation.SystemLog;
 import org.franco.domain.ResponseResult;
 import org.franco.domain.entity.User;
 import org.franco.service.UserService;
@@ -21,6 +22,7 @@ public class UserController {
         return userService.getUserInfo();
     }
 
+    @SystemLog(controllerDescription = "Update user info")
     @PutMapping
     public ResponseResult updateUserInfo(@RequestBody User user) {
         return userService.updateUserInfo(user);
