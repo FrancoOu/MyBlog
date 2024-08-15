@@ -1,5 +1,6 @@
 package org.franco.controller;
 
+import io.swagger.annotations.Api;
 import org.franco.annotation.SystemLog;
 import org.franco.domain.ResponseResult;
 import org.franco.domain.entity.User;
@@ -13,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class LoginController {
+@Api(tags = "Authentication", description = "Interfaces for Authentication")
+
+public class AuthenticationController {
 
     @Autowired
     private AuthenticationService authenticationService;

@@ -1,6 +1,7 @@
 package org.franco.controller;
 
 
+import io.swagger.annotations.Api;
 import org.franco.annotation.SystemLog;
 import org.franco.domain.ResponseResult;
 import org.franco.domain.entity.User;
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
+@Api(tags = "User", description = "Interfaces for User")
+
 public class UserController {
 
     @Autowired
