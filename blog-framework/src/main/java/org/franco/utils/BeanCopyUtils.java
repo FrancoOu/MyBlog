@@ -1,7 +1,5 @@
 package org.franco.utils;
 
-import org.franco.domain.entity.Article;
-import org.franco.domain.vo.HotArticleVo;
 import org.springframework.beans.BeanUtils;
 
 import java.util.List;

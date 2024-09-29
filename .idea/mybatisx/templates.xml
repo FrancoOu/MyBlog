@@ -13,7 +13,7 @@
             <option name="extraClassSuffix" value="" />
             <option name="ignoreFieldPrefix" value="" />
             <option name="ignoreFieldSuffix" value="" />
-            <option name="ignoreTablePrefix" value="" />
+            <option name="ignoreTablePrefix" value="sys_" />
             <option name="ignoreTableSuffix" value="" />
             <option name="moduleName" value="blog-framework" />
             <option name="modulePath" value="$PROJECT_DIR$/blog-framework" />
@@ -68,8 +68,8 @@
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="User" />
-                  <option name="tableName" value="user" />
+                  <option name="className" value="ArticleTag" />
+                  <option name="tableName" value="article_tag" />
                 </TableUIInfo>
               </list>
             </option>

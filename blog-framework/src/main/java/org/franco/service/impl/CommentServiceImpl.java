@@ -54,7 +54,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment>
 
         List<CommentVo> commentVoList = convertCommentVo(page.getRecords());
 
-        for (CommentVo commentVo: commentVoList) {
+        for (CommentVo commentVo : commentVoList) {
             List<CommentVo> childrenComments = getChildren(commentVo.getId());
             commentVo.setChildren(childrenComments);
         }

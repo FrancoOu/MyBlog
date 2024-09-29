@@ -7,7 +7,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 import org.franco.constants.SystemConstants;
 import org.franco.domain.ResponseResult;
+import org.franco.domain.dto.ArticleDto;
 import org.franco.domain.entity.Article;
+import org.franco.domain.entity.ArticleTag;
 import org.franco.domain.entity.Category;
 import org.franco.domain.vo.DisplayedArticleVo;
 import org.franco.domain.vo.HotArticleVo;
@@ -15,10 +17,13 @@ import org.franco.domain.vo.PageVo;
 import org.franco.domain.vo.SingleArticleVo;
 import org.franco.mapper.ArticleMapper;
 import org.franco.service.ArticleService;
+import org.franco.service.ArticleTagService;
 import org.franco.service.CategoryService;
 import org.franco.utils.BeanCopyUtils;
+import org.franco.utils.RedisCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Map;
@@ -36,6 +41,12 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article>
 
     @Autowired
     private CategoryService categoryService;
+
+    @Autowired
+    private RedisCache redisCache;
+
+    @Autowired
+    private ArticleTagService articleTagService;
 
     public ResponseResult getHotArticles(){
 
@@ -99,6 +110,10 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article>
     @Override
     public ResponseResult getArticleById(Long id) {
         Article article = getById(id);
+
+        Integer viewCount = redisCache.getCacheMapValue(SystemConstants.VIEW_COUNT_MAP_KEY, String.valueOf(id));
+        //Get view count from redis
+        article.setViewCount(viewCount.longValue());
         SingleArticleVo singleArticleVo = BeanCopyUtils.copyBean(article, SingleArticleVo.class);
         Long categoryId = article.getCategoryId();
 
@@ -108,6 +123,33 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article>
         }
 
         return ResponseResult.okResult(singleArticleVo);
+    }
+
+    /**
+     * update the view count
+     * @param id article id
+     * @return
+     */
+    @Override
+    public ResponseResult updateViewCount(Long id) {
+        redisCache.incrementCacheMapValue(SystemConstants.VIEW_COUNT_MAP_KEY, id.toString(), 1);
+
+        return ResponseResult.okResult();
+    }
+
+    @Override
+    @Transactional
+    public ResponseResult addArticle(ArticleDto articleDto) {
+        Article newArticle = BeanCopyUtils.copyBean(articleDto, Article.class);
+        save(newArticle);
+
+        List<ArticleTag> articleTags = articleDto.getTags().stream()
+                .map(tag-> new ArticleTag(newArticle.getId(), tag))
+                .collect(Collectors.toList());
+
+        articleTagService.saveBatch(articleTags);
+
+        return ResponseResult.okResult();
     }
 }
 

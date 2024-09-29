@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.franco.mapper.RoleMapper">
+
+    <resultMap id="BaseResultMap" type="org.franco.domain.entity.Role">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="roleName" column="role_name" jdbcType="VARCHAR"/>
+            <result property="roleKey" column="role_key" jdbcType="VARCHAR"/>
+            <result property="roleSort" column="role_sort" jdbcType="INTEGER"/>
+            <result property="status" column="status" jdbcType="CHAR"/>
+            <result property="delFlag" column="del_flag" jdbcType="CHAR"/>
+            <result property="createdBy" column="created_by" jdbcType="BIGINT"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updatedBy" column="updated_by" jdbcType="BIGINT"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,role_name,role_key,
+        role_sort,status,del_flag,
+        created_by,create_time,updated_by,
+        update_time,remark
+    </sql>
+    <select id="getRoleByUserId" resultType="java.lang.String">
+        select r.role_key
+        from sys_user_role sur
+                 left join sys_role r on sur.role_id = r.id
+        where sur.user_id = #{id} and r.status = 0 and r.del_flag = 0
+
+    </select>
+</mapper>

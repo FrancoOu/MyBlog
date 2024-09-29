@@ -14,6 +14,9 @@ public enum AppHttpCodeEnum {
     REQUIRE_USERNAME(401, "Username required"),
     LOGIN_ERROR(401,"Wrong username or password"),
     EMPTY_CONTENT_ERROR(400, "Empty comment"),
+
+    EMPTY_TAG_ERROR(400, "Empty tag name or remark"),
+
     FILE_TYPE_ERROR(422, "File type not supported"),
     EMPTY_USERNAME(400, "Username is empty"),
     EMPTY_EMAIL(400, "Email is empty"),

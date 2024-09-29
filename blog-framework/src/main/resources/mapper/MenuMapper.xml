@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.franco.mapper.MenuMapper">
+
+    <resultMap id="BaseResultMap" type="org.franco.domain.entity.Menu">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="menuName" column="menu_name" jdbcType="VARCHAR"/>
+            <result property="parentId" column="parent_id" jdbcType="BIGINT"/>
+            <result property="orderNum" column="order_num" jdbcType="INTEGER"/>
+            <result property="path" column="path" jdbcType="VARCHAR"/>
+            <result property="component" column="component" jdbcType="VARCHAR"/>
+            <result property="isFrame" column="is_frame" jdbcType="INTEGER"/>
+            <result property="menuType" column="menu_type" jdbcType="CHAR"/>
+            <result property="visible" column="visible" jdbcType="CHAR"/>
+            <result property="status" column="status" jdbcType="CHAR"/>
+            <result property="perms" column="perms" jdbcType="VARCHAR"/>
+            <result property="icon" column="icon" jdbcType="VARCHAR"/>
+            <result property="createdBy" column="created_by" jdbcType="BIGINT"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updatedBy" column="updated_by" jdbcType="BIGINT"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+            <result property="delFlag" column="del_flag" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,menu_name,parent_id,
+        order_num,path,component,
+        is_frame,menu_type,visible,
+        status,perms,icon,
+        created_by,create_time,updated_by,
+        update_time,remark,del_flag
+    </sql>
+    <select id="selectPermsByUserId" resultType="java.lang.String">
+        select
+            DISTINCT sm.perms
+        from
+            sys_user_role ur
+                left join sys_role_menu srm on ur.role_id = srm.role_id
+                left join sys_menu sm on srm.menu_id = sm.id
+        where ur.user_id = #{userId} and sm.menu_type in ('M','B') and sm.status = 0 and sm.del_flag = 0;
+
+    </select>
+    <select id="selectAllRouterMenu" resultType="org.franco.domain.entity.Menu">
+        select DISTINCT m.id, m.parent_id, m.menu_name, m.path, m.component,
+                        m.visible, m.status, IFNULL(m.perms,'') AS perms, m.is_frame,  m.menu_type,
+                        m.icon, m.order_num, m.create_time
+        from sys_menu m
+        where m.menu_type in ('C','M') and
+            m.status = 0 and
+            m.del_flag = 0
+        order by
+            m.parent_id, m.order_num
+
+    </select>
+    <select id="selectRouterMenuTreeByUserId" resultType="org.franco.domain.entity.Menu">
+        SELECT
+            DISTINCT m.id, m.parent_id, m.menu_name, m.path, m.component,
+                     m.visible, m.status, IFNULL(m.perms,'') AS perms, m.is_frame,  m.menu_type,
+                     m.icon, m.order_num, m.create_time
+        FROM
+            `sys_user_role` ur
+                LEFT JOIN `sys_role_menu` rm ON ur.`role_id` = rm.`role_id`
+                LEFT JOIN `sys_menu` m ON m.`id` = rm.`menu_id`
+        WHERE
+            ur.`user_id` = #{id} AND
+            m.`menu_type` IN ('C','M') AND
+            m.`status` = 0 AND
+            m.`del_flag` = 0
+        ORDER BY
+            m.parent_id, m.order_num
+    </select>
+</mapper>

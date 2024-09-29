@@ -3,6 +3,7 @@ package org.franco.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.franco.domain.ResponseResult;
+import org.franco.domain.dto.ArticleDto;
 import org.franco.domain.entity.Article;
 
 /**
@@ -17,4 +18,8 @@ public interface ArticleService extends IService<Article> {
     ResponseResult getArticles(Integer pageNum, Integer pageSize, Long categoryId);
 
     ResponseResult getArticleById(Long id);
+
+    ResponseResult updateViewCount(Long id);
+
+    ResponseResult addArticle(ArticleDto articleDto);
 }

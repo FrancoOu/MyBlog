@@ -5,7 +5,6 @@ import com.google.cloud.storage.*;
 import lombok.Data;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.IOUtils;
-import org.checkerframework.checker.units.qual.A;
 import org.franco.domain.ResponseResult;
 import org.franco.enums.AppHttpCodeEnum;
 import org.franco.exception.SystemException;
@@ -14,13 +13,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
-import java.util.ArrayList;
-import java.util.List;
+
 
 
 @Service
@@ -30,7 +26,6 @@ public class UploadServiceImpl implements UploadService {
 
     String projectId;
     String bucketName;
-
 
     @Override
     public ResponseResult uploadImg(MultipartFile imgFile) {

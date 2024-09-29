@@ -5,9 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cbd698f-c707-431c-88e7-08310445163e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/controller/ArticleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/dto/ArticleDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/vo/TagVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-client/src/main/java/org/franco/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/AdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/AdminApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/constants/SystemConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/constants/SystemConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/vo/CategoryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/vo/CategoryVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/vo/HotArticleVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/vo/HotArticleVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/enums/AppHttpCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/enums/AppHttpCodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/handler/mybatisplus/ObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/handler/mybatisplus/ObjectHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/ArticleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/AuthenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/AuthenticationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/UploadServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/UploadServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils/BeanCopyUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils/BeanCopyUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils/RedisCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils/RedisCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils/SecurityUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils/SecurityUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +86,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -82,42 +106,42 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/config" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.franco.filter" />
+      <recent name="org.franco.config" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BlogApplication">
-    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="GoogleCloudStorageTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="blog-client" />
+  <component name="RunManager" selected="Application.AdminApplication">
+    <configuration name="AdminApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.franco.AdminApplication" />
+      <module name="blog-admin" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.franco.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.franco" />
-      <option name="MAIN_CLASS_NAME" value="org.franco.GoogleCloudStorageTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GoogleCloudStorageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="blog-client" />
+    <configuration name="JwtUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.franco.utils.JwtUtil" />
+      <module name="blog-framework" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.franco.*" />
+          <option name="PATTERN" value="org.franco.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.franco" />
-      <option name="MAIN_CLASS_NAME" value="com.franco.GoogleCloudStorageTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GoogleCloudStorageTest.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="GoogleCloudStorageTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="blog-client" />
       <extension name="coverage">
         <pattern>
@@ -147,19 +171,18 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.JwtUtil" />
+      <item itemvalue="Application.AdminApplication" />
       <item itemvalue="HTTP Request.generated-requests | #2" />
-      <item itemvalue="JUnit.GoogleCloudStorageTest" />
-      <item itemvalue="JUnit.GoogleCloudStorageTest (1)" />
-      <item itemvalue="JUnit.GoogleCloudStorageTest.test (1)" />
+      <item itemvalue="JUnit.GoogleCloudStorageTest.test" />
       <item itemvalue="Spring Boot.BlogApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AdminApplication" />
         <item itemvalue="Spring Boot.BlogApplication" />
+        <item itemvalue="Application.JwtUtil" />
         <item itemvalue="HTTP Request.generated-requests | #2" />
-        <item itemvalue="JUnit.GoogleCloudStorageTest.test (1)" />
-        <item itemvalue="JUnit.GoogleCloudStorageTest (1)" />
-        <item itemvalue="JUnit.GoogleCloudStorageTest" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +202,13 @@
       <workItem from="1721372195018" duration="11802000" />
       <workItem from="1721557229985" duration="82928000" />
       <workItem from="1722748960174" duration="14526000" />
-      <workItem from="1722925445896" duration="30705000" />
+      <workItem from="1722925445896" duration="40294000" />
+      <workItem from="1723642633018" duration="27254000" />
+      <workItem from="1725606025573" duration="880000" />
+      <workItem from="1726892364388" duration="10579000" />
+      <workItem from="1727068055426" duration="1247000" />
+      <workItem from="1727090845121" duration="26458000" />
+      <workItem from="1727398118348" duration="6527000" />
     </task>
     <servers />
   </component>
@@ -206,14 +235,10 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/blog-admin/src/main/java/org/franco/Main.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/UploadServiceImpl.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
-          <option name="timeStamp" value="5" />
-        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

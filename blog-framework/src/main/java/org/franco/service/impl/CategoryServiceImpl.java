@@ -6,6 +6,7 @@ import org.franco.constants.SystemConstants;
 import org.franco.domain.ResponseResult;
 import org.franco.domain.entity.Article;
 import org.franco.domain.entity.Category;
+import org.franco.domain.vo.CategoryAdminVo;
 import org.franco.domain.vo.CategoryVo;
 import org.franco.service.ArticleService;
 import org.franco.service.CategoryService;
@@ -50,6 +51,21 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category>
 
         List<CategoryVo> categoryVos = BeanCopyUtils.copyBeanList(categories, CategoryVo.class);
         return ResponseResult.okResult(categoryVos);
+    }
+
+    @Override
+    public ResponseResult getAllCategoryForAdmin() {
+        // get published categories
+        LambdaQueryWrapper<Category> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.select(Category::getName, Category::getId, Category::getDescription);
+        queryWrapper.eq(Category::getStatus, SystemConstants.CATEGORY_PUBLISHED);
+
+        List<Category> categories = list(queryWrapper);
+
+        List<CategoryAdminVo> categoryAdminVos = BeanCopyUtils.copyBeanList(categories, CategoryAdminVo.class);
+
+        return ResponseResult.okResult(categoryAdminVos);
+
     }
 }
 

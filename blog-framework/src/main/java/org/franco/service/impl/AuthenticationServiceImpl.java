@@ -1,5 +1,6 @@
 package org.franco.service.impl;
 
+import org.franco.constants.SystemConstants;
 import org.franco.domain.ResponseResult;
 import org.franco.domain.entity.LoginUser;
 import org.franco.domain.entity.User;
@@ -42,7 +43,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         String jwt = JwtUtil.createJWT(userId);
 
         // store user info into redis
-        redisCache.setCacheObject("login:"+userId, loginUser);
+        redisCache.setCacheObject(SystemConstants.CLIENT_USER_LOGIN_KEY +userId, loginUser);
         UserInfo userInfo = BeanCopyUtils.copyBean(loginUser.getUser(), UserInfo.class);
 
         UserLoginVo userLoginVo = new UserLoginVo(jwt, userInfo);
