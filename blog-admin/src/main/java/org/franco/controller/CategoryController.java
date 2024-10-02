@@ -3,6 +3,7 @@ package org.franco.controller;
 
 import com.alibaba.excel.EasyExcel;
 import org.franco.domain.ResponseResult;
+import org.franco.domain.dto.CategoryDto;
 import org.franco.domain.entity.Category;
 import org.franco.domain.vo.CategorySheetVo;
 import org.franco.enums.AppHttpCodeEnum;
@@ -12,10 +13,7 @@ import org.franco.utils.WebUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.ObjectUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
@@ -28,23 +26,39 @@ public class CategoryController {
     CategoryService categoryService;
 
     @GetMapping
-    public ResponseResult getAllCategory(Integer pageNum, Integer pageSize){
+    public ResponseResult getAllCategory(Integer pageNum, Integer pageSize, String name, String status){
 
         if (ObjectUtils.isEmpty(pageNum) && ObjectUtils.isEmpty(pageSize)){
             return categoryService.getAllCategoryForAdmin();
 
         }else {
-            return categoryService.getPagedCategories(pageNum, pageSize);
+            return categoryService.getPagedCategories(pageNum, pageSize, name, status);
 
         }
     }
 
-
-//    TODO: get category by id
     @GetMapping("/{id}")
     public ResponseResult getCategoryById(@PathVariable Long id) {
 
         return categoryService.getCategoryById(id);
+
+    }
+
+    @PostMapping
+    public ResponseResult addCategory(@RequestBody CategoryDto categoryDto){
+
+        return categoryService.addCategory(categoryDto);
+
+    }
+
+    @PutMapping
+    public ResponseResult updateCategory(@RequestBody CategoryDto categoryDto){
+        return categoryService.updateCategory(categoryDto);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseResult deleteCategoryById(@PathVariable Long id){
+        return categoryService.deleteCategoryById(id);
 
     }
 

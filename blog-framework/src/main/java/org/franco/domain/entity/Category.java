@@ -1,8 +1,7 @@
 package org.franco.domain.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.util.Date;
 
 import lombok.AllArgsConstructor;
@@ -47,21 +46,25 @@ public class Category {
     /**
      * 
      */
+    @TableField(fill = FieldFill.INSERT)
     private Long createdBy;
 
     /**
      * 
      */
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
     /**
      * 
      */
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Long updatedBy;
 
     /**
      * 
      */
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 
     /**

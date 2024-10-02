@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cbd698f-c707-431c-88e7-08310445163e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/controller/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/vo/CategoryAdminVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/vo/CategoryAdminVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/LinkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/LinkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/LinkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/LinkServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +195,7 @@
       <workItem from="1726892364388" duration="10579000" />
       <workItem from="1727068055426" duration="1247000" />
       <workItem from="1727090845121" duration="26458000" />
-      <workItem from="1727398118348" duration="40289000" />
+      <workItem from="1727398118348" duration="43196000" />
     </task>
     <servers />
   </component>
@@ -235,11 +236,6 @@
           <url>file://$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/UploadServiceImpl.java</url>
           <line>62</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/ArticleServiceImpl.java</url>
-          <line>199</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

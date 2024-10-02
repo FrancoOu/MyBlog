@@ -1,6 +1,7 @@
 package org.franco.service;
 
 import org.franco.domain.ResponseResult;
+import org.franco.domain.dto.CategoryDto;
 import org.franco.domain.entity.Category;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -14,7 +15,13 @@ public interface CategoryService extends IService<Category> {
 
     ResponseResult getAllCategoryForAdmin();
 
-    ResponseResult getPagedCategories(Integer pageNum, Integer pageSize);
+    ResponseResult getPagedCategories(Integer pageNum, Integer pageSize, String name, String status);
 
     ResponseResult getCategoryById(Long id);
+
+    ResponseResult addCategory(CategoryDto categoryDto);
+
+    ResponseResult updateCategory(CategoryDto categoryDto);
+
+    ResponseResult deleteCategoryById(Long id);
 }

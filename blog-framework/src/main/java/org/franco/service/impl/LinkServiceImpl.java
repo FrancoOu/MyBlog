@@ -1,15 +1,20 @@
 package org.franco.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.franco.constants.SystemConstants;
 import org.franco.domain.ResponseResult;
+import org.franco.domain.dto.LinkDto;
+import org.franco.domain.entity.Category;
 import org.franco.domain.entity.Link;
 import org.franco.domain.vo.LinkVo;
+import org.franco.domain.vo.PageVo;
 import org.franco.service.LinkService;
 import org.franco.mapper.LinkMapper;
 import org.franco.utils.BeanCopyUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 
@@ -34,6 +39,45 @@ public class LinkServiceImpl extends ServiceImpl<LinkMapper, Link>
         List<LinkVo> linkVoList = BeanCopyUtils.copyBeanList(this.list(linkLambdaQueryWrapper), LinkVo.class);
 
         return ResponseResult.okResult(linkVoList);
+    }
+
+    @Override
+    public ResponseResult getPagedLinks(Integer pageNum, Integer pageSize, String name, String status) {
+        // set query
+        LambdaQueryWrapper<Link> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+
+        lambdaQueryWrapper
+                .like(StringUtils.hasText(name), Link::getName, name)
+                .eq(StringUtils.hasText(status), Link::getStatus, status);
+
+        // set pagination
+        Page<Link> page = new Page<>();
+        page.setCurrent(pageNum);
+        page.setSize(pageSize);
+        page(page,lambdaQueryWrapper);
+
+        PageVo pageVo = new PageVo(page.getRecords(), page.getTotal());
+
+        return ResponseResult.okResult(pageVo);
+
+    }
+
+    @Override
+    public ResponseResult addLink(LinkDto linkDto) {
+        Link newLink = BeanCopyUtils.copyBean(linkDto, Link.class);
+
+        save(newLink);
+
+        return ResponseResult.okResult();
+    }
+
+    @Override
+    public ResponseResult updateLink(LinkDto linkDto) {
+        Link updatedLink = BeanCopyUtils.copyBean(linkDto, Link.class);
+
+        updateById(updatedLink);
+
+        return ResponseResult.okResult();
     }
 }
 
