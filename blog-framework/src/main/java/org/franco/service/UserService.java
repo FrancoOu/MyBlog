@@ -1,6 +1,7 @@
 package org.franco.service;
 
 import org.franco.domain.ResponseResult;
+import org.franco.domain.dto.AdminUserDto;
 import org.franco.domain.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -16,4 +17,14 @@ public interface UserService extends IService<User> {
     ResponseResult updateUserInfo(User user);
 
     ResponseResult createUser(User user);
+
+    ResponseResult getUsers(Integer pageNum, Integer pageSize, String userName, String phonenumber, String status);
+
+    ResponseResult addUser(AdminUserDto adminUserDto);
+
+    ResponseResult deleteAdminUserById(Long id);
+
+    ResponseResult updateAdminUser(AdminUserDto adminUserDto);
+
+    ResponseResult getUserById(Long id);
 }

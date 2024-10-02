@@ -5,36 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cbd698f-c707-431c-88e7-08310445163e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/controller/MenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/controller/RoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/dto/RoleDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/dto/RoleStatusDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/permissionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/controller/RoleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/java/org/franco/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/constants/SystemConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/constants/SystemConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/LoginUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/vo/DisplayedArticleVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/vo/DisplayedArticleVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/vo/SingleArticleVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/vo/SingleArticleVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/enums/AppHttpCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/enums/AppHttpCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/MenuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/RoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/ArticleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/MenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/MenuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils/WebUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils/WebUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/domain/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,8 +82,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="org.franco.domain.vo" />
       <recent name="org.franco.domain.dto" />
+      <recent name="org.franco.domain.vo" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/blog-framework/src/main/java/org/franco/utils" />
@@ -217,7 +194,7 @@
       <workItem from="1726892364388" duration="10579000" />
       <workItem from="1727068055426" duration="1247000" />
       <workItem from="1727090845121" duration="26458000" />
-      <workItem from="1727398118348" duration="34202000" />
+      <workItem from="1727398118348" duration="40289000" />
     </task>
     <servers />
   </component>
@@ -258,6 +235,11 @@
           <url>file://$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/UploadServiceImpl.java</url>
           <line>62</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/blog-framework/src/main/java/org/franco/service/impl/ArticleServiceImpl.java</url>
+          <line>199</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -5,6 +5,7 @@ import org.franco.domain.dto.RoleDto;
 import org.franco.domain.dto.RoleStatusDto;
 import org.franco.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -17,9 +18,17 @@ public class RoleController {
     @GetMapping
     public ResponseResult getRoles(Integer pageNum, Integer pageSize, String roleName, String status){
 
-        return roleService.getRoles(pageNum, pageSize, roleName, status);
-
+        if (pageNum == null && pageSize == null && !StringUtils.hasText(roleName) && !StringUtils.hasText(status)){
+            return ResponseResult.okResult(roleService.list());
+        }else {
+            return roleService.getRoles(pageNum, pageSize, roleName, status);
+        }
     }
+
+//    @GetMapping
+//    public ResponseResult getAllRoles(){
+//        return ResponseResult.okResult(roleService.list());
+//    }
 
     @GetMapping("/{id}")
     public ResponseResult getRoleById(@PathVariable Long id){

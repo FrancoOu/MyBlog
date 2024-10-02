@@ -67,11 +67,13 @@ public class User implements Serializable {
     /**
      * 创建人的用户id
      */
+    @TableField(fill = FieldFill.INSERT)
     private Long createdBy;
 
     /**
      * 创建时间
      */
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
     /**
