@@ -8,13 +8,12 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.franco.constants.SystemConstants;
 import org.franco.domain.ResponseResult;
 import org.franco.domain.dto.ArticleDto;
+import org.franco.domain.dto.ArticleListDto;
 import org.franco.domain.entity.Article;
 import org.franco.domain.entity.ArticleTag;
 import org.franco.domain.entity.Category;
-import org.franco.domain.vo.DisplayedArticleVo;
-import org.franco.domain.vo.HotArticleVo;
-import org.franco.domain.vo.PageVo;
-import org.franco.domain.vo.SingleArticleVo;
+import org.franco.domain.entity.Tag;
+import org.franco.domain.vo.*;
 import org.franco.mapper.ArticleMapper;
 import org.franco.service.ArticleService;
 import org.franco.service.ArticleTagService;
@@ -24,6 +23,7 @@ import org.franco.utils.RedisCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 import java.util.Map;
@@ -148,6 +148,78 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article>
                 .collect(Collectors.toList());
 
         articleTagService.saveBatch(articleTags);
+
+        return ResponseResult.okResult();
+    }
+
+    @Override
+    public ResponseResult getPagedArticles(Integer pageNum, Integer pageSize, ArticleListDto articleListDto) {
+        // set query
+        LambdaQueryWrapper<Article> queryWrapper = new LambdaQueryWrapper<>();
+
+        queryWrapper.like(StringUtils.hasText(articleListDto.getSummary()), Article::getSummary, articleListDto.getSummary());
+        queryWrapper.like(StringUtils.hasText(articleListDto.getTitle()), Article::getTitle, articleListDto.getTitle());
+
+        // set pagination
+        Page<Article> page = new Page<>();
+        page.setCurrent(pageNum);
+        page.setSize(pageSize);
+        page(page, queryWrapper);
+
+        List<ArticleAdminVo> articleAdminVos = BeanCopyUtils.copyBeanList(page.getRecords(), ArticleAdminVo.class);
+
+        // put data in pageVo
+        PageVo pageVo = new PageVo(articleAdminVos, page.getTotal());
+        return ResponseResult.okResult(pageVo);
+    }
+
+    @Override
+    public ResponseResult getArticleByIdForEdit(Long id) {
+        Article article = getById(id);
+        ArticleEditVo articleEditVo = BeanCopyUtils.copyBean(article, ArticleEditVo.class);
+        LambdaQueryWrapper<ArticleTag> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+        lambdaQueryWrapper
+                .select(ArticleTag::getTagId)
+                .eq(ArticleTag::getArticleId, id);
+        List<Long> tagIds = articleTagService.list(lambdaQueryWrapper).stream()
+                .map(ArticleTag::getTagId)
+                .collect(Collectors.toList());
+        articleEditVo.setTags(tagIds);
+        return ResponseResult.okResult(articleEditVo);
+    }
+
+    @Override
+    @Transactional
+    public ResponseResult updateArticle(ArticleDto articleDto) {
+
+        // update article
+        Article updatedArticle = BeanCopyUtils.copyBean(articleDto, Article.class);
+        updateById(updatedArticle);
+
+        // delete original tags
+        LambdaQueryWrapper<ArticleTag> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(ArticleTag::getArticleId, articleDto.getId());
+        articleTagService.remove(queryWrapper);
+
+        // add new tags
+        List<ArticleTag> articleTags = articleDto.getTags().stream()
+                .map(tag-> new ArticleTag(updatedArticle.getId(), tag))
+                .collect(Collectors.toList());
+        articleTagService.saveBatch(articleTags);
+
+        return ResponseResult.okResult();
+    }
+
+    @Override
+    @Transactional
+    public ResponseResult deleteArticleById(Long id) {
+        // delete article
+        removeById(id);
+
+        // delete original tags
+        LambdaQueryWrapper<ArticleTag> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(ArticleTag::getArticleId, id);
+        articleTagService.remove(queryWrapper);
 
         return ResponseResult.okResult();
     }

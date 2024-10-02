@@ -1,10 +1,9 @@
 package org.franco.domain.entity;
 
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+
+import java.io.Serializable;
 import java.util.Date;
 
 import lombok.AllArgsConstructor;
@@ -22,7 +21,7 @@ import lombok.experimental.Accessors;
 @AllArgsConstructor
 // return the updated object when using setter methods
 @Accessors (chain = true)
-public class Article {
+public class Article implements Serializable {
     /**
      * 
      */
@@ -80,21 +79,25 @@ public class Article {
     /**
      * 
      */
+    @TableField(fill = FieldFill.INSERT)
     private Long createdBy;
 
     /**
      * 
      */
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
     /**
      * 
      */
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Long updatedBy;
 
     /**
      * 
      */
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 
     /**

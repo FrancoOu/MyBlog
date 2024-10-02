@@ -8,10 +8,9 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class DisplayedArticleVo {
-
+@NoArgsConstructor
+public class ArticleAdminVo {
     private Long id;
 
     private String title;
@@ -20,11 +19,17 @@ public class DisplayedArticleVo {
 
     private String thumbnail;
 
+    private String content;
+
     private Long viewCount;
 
-    private String categoryName;
+    private Long categoryId;
 
-    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+10")
     private Date createTime;
 
+    private String isComment;
+
+    private String status;
+
+    private String isTop;
 }

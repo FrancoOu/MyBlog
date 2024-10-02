@@ -4,6 +4,7 @@ package org.franco.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.franco.domain.ResponseResult;
 import org.franco.domain.dto.ArticleDto;
+import org.franco.domain.dto.ArticleListDto;
 import org.franco.domain.entity.Article;
 
 /**
@@ -22,4 +23,12 @@ public interface ArticleService extends IService<Article> {
     ResponseResult updateViewCount(Long id);
 
     ResponseResult addArticle(ArticleDto articleDto);
+
+    ResponseResult getPagedArticles(Integer pageNum, Integer pageSize, ArticleListDto articleListDto);
+
+    ResponseResult getArticleByIdForEdit(Long id);
+
+    ResponseResult updateArticle(ArticleDto articleDto);
+
+    ResponseResult deleteArticleById(Long id);
 }

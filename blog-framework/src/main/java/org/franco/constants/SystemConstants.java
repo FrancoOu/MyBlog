@@ -28,8 +28,5 @@ public class SystemConstants {
     public static final String SYS_MENU_STATUS_NORMAL = "0";
 
 
-
-
-
-
+    public static final String ADMIN_USER = "1";
 }

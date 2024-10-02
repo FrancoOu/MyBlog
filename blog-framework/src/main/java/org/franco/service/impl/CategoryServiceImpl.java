@@ -1,6 +1,7 @@
 package org.franco.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.franco.constants.SystemConstants;
 import org.franco.domain.ResponseResult;
@@ -8,6 +9,7 @@ import org.franco.domain.entity.Article;
 import org.franco.domain.entity.Category;
 import org.franco.domain.vo.CategoryAdminVo;
 import org.franco.domain.vo.CategoryVo;
+import org.franco.domain.vo.PageVo;
 import org.franco.service.ArticleService;
 import org.franco.service.CategoryService;
 import org.franco.mapper.CategoryMapper;
@@ -54,7 +56,7 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category>
     }
 
     @Override
-    public ResponseResult getAllCategoryForAdmin() {
+    public ResponseResult<CategoryAdminVo> getAllCategoryForAdmin() {
         // get published categories
         LambdaQueryWrapper<Category> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.select(Category::getName, Category::getId, Category::getDescription);
@@ -66,6 +68,23 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category>
 
         return ResponseResult.okResult(categoryAdminVos);
 
+    }
+
+    @Override
+    public ResponseResult getPagedCategories(Integer pageNum, Integer pageSize) {
+        // set pagination
+        Page<Category> page = new Page<>();
+        page.setCurrent(pageNum);
+        page.setSize(pageSize);
+        page(page);
+
+        PageVo pageVo = new PageVo(page.getRecords(), page.getTotal());
+        return ResponseResult.okResult(pageVo);
+    }
+
+    @Override
+    public ResponseResult getCategoryById(Long id) {
+        return null;
     }
 }
 

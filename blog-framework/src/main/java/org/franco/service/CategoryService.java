@@ -13,4 +13,8 @@ public interface CategoryService extends IService<Category> {
     ResponseResult getCategories();
 
     ResponseResult getAllCategoryForAdmin();
+
+    ResponseResult getPagedCategories(Integer pageNum, Integer pageSize);
+
+    ResponseResult getCategoryById(Long id);
 }

@@ -23,10 +23,10 @@ public class SingleArticleVo {
 
     private Long viewCount;
 
-    private long categoryId;
+    private Long categoryId;
 
     private String categoryName;
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+10")
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+10")
     private Date createTime;
 }

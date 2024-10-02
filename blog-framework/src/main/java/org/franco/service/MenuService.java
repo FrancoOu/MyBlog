@@ -1,6 +1,6 @@
 package org.franco.service;
 
-import org.franco.domain.vo.MenuVo;
+import org.franco.domain.ResponseResult;
 import org.franco.domain.entity.Menu;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.franco.domain.vo.RoutersVo;
@@ -17,4 +17,10 @@ public interface MenuService extends IService<Menu> {
     List<String> getPermsByUserId(Long id);
 
     RoutersVo getRouterMenuTreeByUserId(Long id);
+
+    ResponseResult getMenus(String status, String menuName);
+
+    ResponseResult getMenuTreeForRole();
+
+    ResponseResult getRoleMenuTreeById(Long id);
 }
