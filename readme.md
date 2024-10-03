@@ -4,7 +4,7 @@
 
 ### 1. Tech Stack
 1. Framework: Spring Boot, Spring Security, Java 1.8
-2. ORM: MyBatisPlus
+2. Persistence framework: MyBatisPlus
 3. Database: MySQL
 4. File Storage: Google Cloud Storage
 5. Cache: Redis
